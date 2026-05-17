@@ -1,0 +1,20 @@
+.catalog-page {
+  padding: 3rem 0;
+}
+
+.catalog-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.catalog-top input {
+  width: 280px;
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}

@@ -28,6 +28,7 @@ body {
   --bg: #f7f5f2;
   --card: #fff;
   --text: #1f1f1f;
+  --muted: #727272;
   --primary: #d97757;
   --primary-dark: #c16142;
   --border: #e5e2dc;
@@ -72,4 +73,48 @@ input:focus {
   font-size: 1rem;
   line-height: 1;
   color: var(--text);
+}
+
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.recipe-card {
+  box-shadow: var(--shadow);
+  border-radius: var(--border-radius);
+  background-color: var(--card);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.recipe-card {
+  transform: translateY(-2px);
+}
+
+.recipe-card img {
+  height: 220px;
+  object-fit: cover;
+}
+
+.recipe-content {
+  padding: 1rem;
+}
+
+.recipe-content h3 {
+  margin-bottom: 0.5rem;
+}
+
+.recipe-content p {
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.recipe-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--muted);
 }

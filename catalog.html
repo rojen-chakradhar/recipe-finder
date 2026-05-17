@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes | Recipe Finder</title>
+    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/global.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <a href="./index.html">
+        <!-- <img src="./assets/images/logo.png" alt="logo" class="nav-logo"> -->
+         <h1 class="logo">recipe finder</h1>
+      </a>
+      <nav>
+        <a href="./index.html">home</a>
+        <a href="./catalog.html">recipes</a>
+        <a href="./about.html">about</a>
+      </nav>
+    </header>
+    <main class="container catalog-page">
+      <section class="catalog-top">
+        <div>
+          <p class="mini-title para">explore recipes</p>
+          <h2>recipe catalog</h2>
+        </div>
+        <input type="text" placeholder="Search recipes" id="catalogSearch">
+      </section>
+      <section class="filters">
+        <select id="countryFilter">
+          <option value="all">all countries</option>
+          <option value="Nepal">nepal</option>
+          <option value="Japan">japan</option>
+          <option value="Italy">italy</option>
+          <option value="India">india</option>
+          <option value="Germany">germany</option>
+          <option value="France">france</option>
+          <option value="Russia">russia</option>
+        </select>
+        <select id="typeFilter">
+          <option value="all">all types</option>
+          <option value="Veg">veg</option>
+          <option value="Non Veg">non veg</option>
+        </select>
+      </section>
+      <section class="recipe-grid" id="catalogRecipes"></section>
+    </main>
+    <footer>
+      <section class="footer">
+        <div class="footer-info">
+          <h3>recipe finder</h3>
+          <p class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga aspernatur quaerat quam ut corporis maxime iusto assumenda, consectetur, laboriosam accusantium quod blanditiis hic enim beatae.</p>
+        </div>
+        <ul class="footer-links">
+          <li class="footer-link">
+            <a href="./index.html">home</a>
+          </li>
+          <li class="footer-link">
+            <a href="./catalog.html">recipes</a>
+          </li>
+          <li class="footer-link">
+            <a href="./about.html">about</a>
+          </li>
+        </ul>
+      </section>
+      <section class="cc">
+        <p class="para">Copyright 2026 • Rojen Chakradhar - All Rights Reserved.</p>
+      </section>
+    </footer>
+  </body>
+</html>
