@@ -1,20 +1,64 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  list-style: none;
-  scroll-behavior: smooth;
-  /*outline: 1px dotted red;*/
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: normal;
+.hero {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
 }
 
-html,
-body {
-  height: 100%;
-  width: 100%;
+.hero-sec {
+  max-width: 750px;
+  text-align: center;
+}
+
+.tagline {
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.hero-sec h1 {
+  margin-bottom: 1.5rem;
+  font-size: clamp(2.5rem, 5vs, 5rem);
+  font-weight: 500;
+  line-height: 1;
+  color: var(--text);
+}
+
+.search-box, .ingrident-box {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.search-box input, .ingrident-box input {
+  flex: 1;
+}
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.2;
+  text-transform: capitalize;
+  color: var(--text);
+}
+
+.trending-sec {
+  padding-bottom: 4rem;
+}
+
+.sec-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.sec-header a {
+  font-weight: 500;
+  text-transform: capitalize;
+  color: var(--primary);
+}
+
+.sec-header a:hover {
+  text-decoration: underline;
 }

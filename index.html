@@ -3,13 +3,72 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rojen Recipe Finder</title>
+    <title>Recipe Finder</title>
+    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/global.css">
+    <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/footer.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
   </head>
   <body>
+    <header>
+      <a href="./index.html">
+        <!-- <img src="./assets/images/logo.png" alt="logo" class="nav-logo"> -->
+         <h1 class="logo">recipe finder</h1>
+      </a>
+      <nav>
+        <a href="./index.html">home</a>
+        <a href="./catalog.html">recipes</a>
+        <a href="./about.html">about</a>
+      </nav>
+    </header>
     <main>
+      <section class="hero">
+        <section class="hero-sec">
+          <p class="para tagline">Make the food you wanna eat by following the recipe.</p>
+          <h1>Find recipes with ingridents you have.</h1>
+          <section class="search-box">
+            <input type="text" id="homeSearch" placeholder="Search food by name">
+            <button onclick="searchRecipe()" class="btn">search recipes</button>
+          </section>
+          <section class="ingrident-box">
+            <h2>ingridents</h2>
+            <input type="text" id="ingridentInput" placeholder="Enter ingridents u have">
+            <button onclick="findIngridents()" class="btn">search recipes</button>
+          </section>
+        </section>
+      </section>
+      <section class="trending-sec container">
+        <section class="sec-header">
+          <h2>trending recipes</h2>
+          <a href="./catalog.html">view all</a>
+        </section>
+        <section class="recipe-grid" id="trendingRecipes"></section>
+      </section>
     </main>
+    <footer>
+      <section class="footer">
+        <div class="footer-info">
+          <h3>recipe finder</h3>
+          <p class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga aspernatur quaerat quam ut corporis maxime iusto assumenda, consectetur, laboriosam accusantium quod blanditiis hic enim beatae.</p>
+        </div>
+        <ul class="footer-links">
+          <li class="footer-link">
+            <a href="./index.html">home</a>
+          </li>
+          <li class="footer-link">
+            <a href="./catalog.html">recipes</a>
+          </li>
+          <li class="footer-link">
+            <a href="./about.html">about</a>
+          </li>
+        </ul>
+      </section>
+      <section class="cc">
+        <p class="para">Copyright 2026 • Rojen Chakradhar - All Rights Reserved.</p>
+      </section>
+    </footer>
     <script src="./scripts/script.js"></script>
   </body>
 </html>
