@@ -31,7 +31,7 @@ body {
   --primary: #d97757;
   --primary-dark: #c16142;
   --border: #e5e2dc;
-  --border-radius: 18px;
+  --border-radius: 2rem;
   --shadow: 0 10px 30px #0000000f;
 }
 
