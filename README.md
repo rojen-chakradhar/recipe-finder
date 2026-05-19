@@ -1,6 +1,8 @@
 # Recipe Finder
 A small recipe finder webapp to learn about api.
 
+<img src="./127.0.0.1_5500_index.html.png" alt="website preview">
+
 ## Features
 - Responsive
 - Search recipes
