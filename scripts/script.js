@@ -1,10 +1,7 @@
-// API Configuration
 const API_BASE = 'https://www.themealdb.com/api/json/v1/1';
 
-// Fetch and display trending recipes on home page
 async function loadTrendingRecipes() {
   try {
-    // Fetch random meals to show as trending
     const container = document.getElementById('trendingRecipes');
     if (!container) return;
 
@@ -28,7 +25,6 @@ async function loadTrendingRecipes() {
   }
 }
 
-// Search recipes by name
 async function searchRecipe() {
   const query = document.getElementById('homeSearch')?.value.trim();
   if (!query) return alert('Please enter a recipe name');
@@ -49,7 +45,6 @@ async function searchRecipe() {
   }
 }
 
-// Search recipes by ingredients
 async function findIngridents() {
   const ingredient = document.getElementById('ingridentInput')?.value.trim();
   if (!ingredient) return alert('Please enter an ingredient');
@@ -71,7 +66,6 @@ async function findIngridents() {
   }
 }
 
-// Load catalog recipes
 async function loadCatalogRecipes() {
   try {
     const container = document.getElementById('catalogRecipes');
@@ -79,7 +73,6 @@ async function loadCatalogRecipes() {
 
     container.innerHTML = '<p class="loading">Loading recipes...</p>';
 
-    // Check for search results
     const searchResults = sessionStorage.getItem('searchResults');
     if (searchResults) {
       const recipes = JSON.parse(searchResults);
@@ -93,17 +86,14 @@ async function loadCatalogRecipes() {
       return;
     }
 
-    // Default: fetch recipes by cuisine
     const country = document.getElementById('countryFilter')?.value || 'all';
     let recipes = [];
 
     if (country === 'all') {
-      // Fetch popular meals
       const response = await fetch(`${API_BASE}/search.php?s=a`);
       const data = await response.json();
       recipes = data.meals ? data.meals.slice(0, 12) : [];
     } else {
-      // Fetch by area/country
       const response = await fetch(`${API_BASE}/filter.php?a=${encodeURIComponent(country)}`);
       const data = await response.json();
       recipes = data.meals || [];
@@ -120,7 +110,6 @@ async function loadCatalogRecipes() {
   }
 }
 
-// Load single recipe details
 async function loadRecipeDetails() {
   try {
     const params = new URLSearchParams(window.location.search);
@@ -153,7 +142,6 @@ async function loadRecipeDetails() {
   }
 }
 
-// Create recipe card HTML
 function createRecipeCard(recipe) {
   const card = document.createElement('div');
   card.className = 'recipe-card';
@@ -177,7 +165,6 @@ function createRecipeCard(recipe) {
   return card;
 }
 
-// Create detailed recipe HTML
 function createRecipeDetailHTML(meal) {
   const ingredients = [];
   for (let i = 1; i <= 20; i++) {
@@ -235,7 +222,6 @@ function createRecipeDetailHTML(meal) {
   `;
 }
 
-// Filter catalog by country
 async function filterByCountry() {
   const country = document.getElementById('countryFilter')?.value || 'all';
   const typeFilter = document.getElementById('typeFilter')?.value || 'all';
@@ -256,7 +242,6 @@ async function filterByCountry() {
       recipes = data.meals || [];
     }
 
-    // Note: TheMealDB doesn't have veg/non-veg filter, so we show all for now
     container.innerHTML = '';
     recipes.forEach(recipe => {
       container.appendChild(createRecipeCard(recipe));
@@ -268,7 +253,6 @@ async function filterByCountry() {
   }
 }
 
-// Search in catalog
 async function searchCatalog(query) {
   if (!query.trim()) {
     loadCatalogRecipes();
@@ -297,7 +281,6 @@ async function searchCatalog(query) {
   }
 }
 
-// Initialize on page load
 document.addEventListener('DOMContentLoaded', () => {
   const path = window.location.pathname;
   
@@ -306,7 +289,6 @@ document.addEventListener('DOMContentLoaded', () => {
   } else if (path.includes('catalog.html')) {
     loadCatalogRecipes();
     
-    // Setup filter listeners
     const countryFilter = document.getElementById('countryFilter');
     const typeFilter = document.getElementById('typeFilter');
     const catalogSearch = document.getElementById('catalogSearch');
