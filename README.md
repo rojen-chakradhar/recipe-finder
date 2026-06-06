@@ -10,7 +10,7 @@ A small recipe finder webapp to learn about api.
 - View recipies
 - clean design
 
-## vierw site
+## view site
 - search [https://rojen-recipe-finder.netlify.app/](https://rojen-recipe-finder.netlify.app/)
 
 or
